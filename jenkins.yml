@@ -14,8 +14,12 @@
   
  # - name: download file
   #  command: wget  http://192.168.1.95:8081/nexus/content/repositories/JEN-DOCKER/doc/{{time}}/{{build}}/{{version}} dest=/tmp/
-  - name: remove previous files
-    command: rm -rf /root/*.html
+ # - name: remove previous files
+  #  command: rm -rf /root/*.html
+    
+  - name: remove web dir contents
+    file: path='/tmp/*.html' state=absent
+     
  
   - name: download file
     get_url: url=http://192.168.1.95:8081/nexus/content/repositories/JEN-DOCKER/doc/{{time}}/{{build}}/{{version}} dest=/tmp/
