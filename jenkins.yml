@@ -48,8 +48,8 @@
       
   - name: committing the modified container
     ### {{new-repo-name}} ###
-    command: docker commit jen-docker-nginx {{new-repo-name}}
+    command: docker commit jen-docker-nginx {{new_repo_name}}
     
   - name: now pushing the modified image to the docker hub repository
     ###  {{new-repo-to-push}} ###
-    command: docker push {{new-repo-to-push}}
+    command: docker push {{new_repo_to_push}}
