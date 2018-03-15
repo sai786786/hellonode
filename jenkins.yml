@@ -44,3 +44,6 @@
     docker_container:
       name: jen-docker-nginx
       state: stopped
+      
+  - name: committing the modified container
+    command: docker commit jen-docker-nginx saikiran786/jen-docker-engine
