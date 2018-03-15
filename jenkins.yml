@@ -53,3 +53,8 @@
   - name: now pushing the modified image to the docker hub repository
     ###  {{new-repo-to-push}} ###
     command: docker push {{new_repo_to_push}}
+    
+  - name: Log out of DockerHub
+    docker_login:
+      state: absent
+      email: saikiran786786@gmail.com
