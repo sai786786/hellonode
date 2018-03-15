@@ -1,5 +1,5 @@
 ---
-- hosts: 
+- hosts: localhostengine-nginx
   become: yes
   gather_facts: False
   tasks:
