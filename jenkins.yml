@@ -29,7 +29,7 @@
     get_url: url=http://192.168.1.95:8081/nexus/content/repositories/JEN-DOCKER/doc/{{time}}/{{build}}/{{version}} dest=/tmp/
 
   - name: rename the downloaded file
-    shell: mv /tmp/*.html index.html
+    shell: mv /tmp/*.html /tmp/index.html
   
   - name: copy file
     command: docker cp /tmp/index.html 6c63ff0d52bbb0b82d46b9ba7b5712461c1310feb8bb47317c021847ee82328b:/usr/share/nginx/html
