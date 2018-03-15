@@ -8,4 +8,4 @@
     yum: name=epel-release state=present
     
   - name: check if myvolume exists in nginx server
-    command: docker run -d  --name=nginxtest --mount source=/var/lib/jenkins/workspace/jenkins-doc-image/index.html,destination=/usr/share/nginx/html nginx:latest
+    command: docker run -d -p 8088:80 --name=nginxtest --mount source=/var/lib/jenkins/workspace/jenkins-doc-image/index.html,destination=/usr/share/nginx/html nginx:latest
