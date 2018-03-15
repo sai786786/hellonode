@@ -17,12 +17,14 @@
  # - name: remove previous files
   #  command: rm -rf /root/*.html
     
-  - name: remove web dir contents
-    file: path='/tmp/{{ item }}' state=absent
-    with_fileglob:
-       - /tmp/*.html
+  #- name: remove web dir contents
+   # file: path='/tmp/{{ item }}' state=absent
+    #with_fileglob:
+     #  - /tmp/*.html
      
- 
+  - name: remove older html files
+    shell: rm -rf /tmp/*.html
+  
   - name: download file
     get_url: url=http://192.168.1.95:8081/nexus/content/repositories/JEN-DOCKER/doc/{{time}}/{{build}}/{{version}} dest=/tmp/
 
