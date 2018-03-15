@@ -38,7 +38,7 @@
     docker_login:
       username: saikiran786
       ### {{password-docker-hub}} ###
-      password: "{{password-docker-hub}}"
+      password: 9966786786
       email: saikiran786786@gmail.com
       
   - name: Stop a container
