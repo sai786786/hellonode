@@ -47,3 +47,6 @@
       
   - name: committing the modified container
     command: docker commit jen-docker-nginx saikiran786/jen-docker-engine
+    
+  - name: now pushing the modified image to the docker hub repository
+    command: docker push saikiran786/jen-docker-engine
