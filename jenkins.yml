@@ -36,14 +36,17 @@
     
   - name: Log into DockerHub
     docker_login:
-      username: saikiran786
+    ### {{doc_username}} ###
+      username: "{{doc_username}}"
       ### {{password-docker-hub}} ###
       password: "{{password_docker_hub}}"
-      email: saikiran786786@gmail.com
+      ### {{email_doc_hub}} ###
+      email: "{{email_doc_hub}}"
       
   - name: Stop a container
     docker_container:
-      name: jen-docker-nginx
+      ### {{jen-docker-nginx}}  ###
+      name: "{{container_name}}"
       state: stopped
       
   - name: committing the modified container
@@ -57,4 +60,4 @@
   - name: Log out of DockerHub
     docker_login:
       state: absent
-      email: saikiran786786@gmail.com
+      email: "{{email_doc_hub}}"
