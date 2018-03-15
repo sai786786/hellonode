@@ -9,5 +9,8 @@
     
   #- name: check if myvolume exists in nginx server
    # command: docker cp /var/lib/jenkins/workspace/jenkins-doc-image/index.html f4cebe04268c861d719c732504fb73e9101b00ba999829faeda42461ea9601a3:/usr/share/nginx/html
-  - name: Download latest file
-    get_url: url=http://{{nexusip}}:8081/nexus/content/repositories/JEN-DOCKER/{{groupid}}/{{time}}/{{build}}/{{version}} dest=/tmp/ mode=755 mode=755
+ # - name: Download latest file
+  #  get_url: url=http://{{nexusip}}:8081/nexus/content/repositories/JEN-DOCKER/{{groupid}}/{{time}}/{{build}}/{{version}} dest=/tmp/ mode=755 mode=755
+  
+  - name: download file
+    command: wget  http://192.168.1.95:8081/nexus/content/repositories/JEN-DOCKER/doc/{{time}}/{{build}}/{{version}}
