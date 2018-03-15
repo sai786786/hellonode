@@ -32,4 +32,4 @@
     shell: mv /tmp/*.html /tmp/index.html
   
   - name: copy file
-    command: docker cp /tmp/index.html a80896df4fa1fc34ca77336469cf002803a14ae65876e2d8612c91d90cc950f7:/usr/share/nginx/html
+    command: docker cp /tmp/index.html 369494335ce0313af1e1d6bfbc921a9af000fc5cccd784f4714db4f8a55d52e5:/usr/share/nginx/html
