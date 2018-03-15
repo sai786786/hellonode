@@ -43,11 +43,11 @@
   - name: Log into DockerHub
     docker_login:
     ### {{doc_username}} ###
-      username: "{{doc_username}}"
+      username: saikiran786
       ### {{password-docker-hub}} ###
-      password: "{{password_docker_hub}}"
+      password: 9966786786
       ### {{email_doc_hub}} ###
-      email: "{{email_doc_hub}}"
+      email: saikiran786786@gmail.com
       
   - name: Stop a container
     docker_container:
@@ -66,4 +66,4 @@
   - name: Log out of DockerHub
     docker_login:
       state: absent
-      email: "{{email_doc_hub}}"
+      email: saikiran786786@gmail.com
