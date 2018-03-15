@@ -59,6 +59,12 @@
     ### {{new-repo-name}} ###
     command: docker commit jen-docker-nginx {{new_repo_name}}
     
+  - name: start docker container
+    docker_container:
+      ### {{jen-docker-nginx}}  ###
+      name: "{{container_name}}"
+      state: started
+    
   - name: now pushing the modified image to the docker hub repository
     ###  {{new-repo-to-push}} ###
     command: docker push {{new_repo_to_push}}
