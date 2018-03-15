@@ -16,5 +16,5 @@
     command: wget  http://192.168.1.95:8081/nexus/content/repositories/JEN-DOCKER/doc/{{time}}/{{build}}/{{version}}
   - name: remove previous files
     command: rm -rf ./*.html
-  - name: copy file
-    command: docker cp ./*.html 6c63ff0d52bbb0b82d46b9ba7b5712461c1310feb8bb47317c021847ee82328b:/usr/share/nginx/html
+ # - name: copy file
+  #  command: docker cp ./*.html 6c63ff0d52bbb0b82d46b9ba7b5712461c1310feb8bb47317c021847ee82328b:/usr/share/nginx/html
