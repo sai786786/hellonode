@@ -39,3 +39,8 @@
       username: saikiran786
       password: 9966786786
       email: saikiran786786@gmail.com
+      
+  - name: Stop a container
+    docker_container:
+      name: jen-docker-nginx
+      state: stopped
