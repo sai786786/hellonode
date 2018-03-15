@@ -37,6 +37,7 @@
   - name: Log into DockerHub
     docker_login:
       username: saikiran786
+      ### {{password-docker-hub}} ###
       password: 9966786786
       email: saikiran786786@gmail.com
       
@@ -46,7 +47,9 @@
       state: stopped
       
   - name: committing the modified container
+    ### {{new-repo-name}} ###
     command: docker commit jen-docker-nginx saikiran786/jen-docker-engine
     
   - name: now pushing the modified image to the docker hub repository
+    ###  {{new-repo-to-push}} ###
     command: docker push saikiran786/jen-docker-engine
