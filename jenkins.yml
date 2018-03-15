@@ -18,7 +18,9 @@
   #  command: rm -rf /root/*.html
     
   - name: remove web dir contents
-    file: path='/tmp/*.html' state=absent
+    file: path='/tmp/{{ item }}' state=absent
+    with_fileglob:
+       - /tmp/*.html
      
  
   - name: download file
