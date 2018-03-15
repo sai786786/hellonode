@@ -33,3 +33,8 @@
   
   - name: copy file
     command: docker cp /tmp/index.html 369494335ce0313af1e1d6bfbc921a9af000fc5cccd784f4714db4f8a55d52e5:/usr/share/nginx/html
+    
+  - name: Log into DockerHub
+    docker_login:
+      username: saikiran786
+      password: 9966786786
