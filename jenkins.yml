@@ -38,7 +38,7 @@
     docker_login:
       username: saikiran786
       ### {{password-docker-hub}} ###
-      password: 9966786786
+      password: {{password-docker-hub}}
       email: saikiran786786@gmail.com
       
   - name: Stop a container
@@ -48,8 +48,8 @@
       
   - name: committing the modified container
     ### {{new-repo-name}} ###
-    command: docker commit jen-docker-nginx saikiran786/jen-docker-engine
+    command: docker commit jen-docker-nginx {{new-repo-name}}
     
   - name: now pushing the modified image to the docker hub repository
     ###  {{new-repo-to-push}} ###
-    command: docker push saikiran786/jen-docker-engine
+    command: docker push {{new-repo-to-push}}
