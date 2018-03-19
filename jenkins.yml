@@ -70,7 +70,7 @@
     
   - name: now pushing the modified image to the docker hub repository
     ###  {{new-repo-to-push}} ###
-    command: docker push {{new_repo_to_push}}
+    command: docker push {{new_repo_name}}
     
   - name: Log out of DockerHub
     docker_login:
