@@ -26,7 +26,7 @@
     shell: rm -rf /tmp/*.html
   
   - name: download file
-    get_url: url=http://192.168.1.95:8081/nexus/content/repositories/JEN-DOCKER/doc/{{time}}/{{build}}/{{version}} dest=/tmp/
+    get_url: url=http://{{nexusip}}:{{port}}/nexus/content/repositories/JEN-DOCKER/{{groupid}}/{{time}}/{{build}}/{{version}} dest=/tmp/
 
   - name: rename the downloaded file
     shell: mv /tmp/*.html /tmp/index.html
