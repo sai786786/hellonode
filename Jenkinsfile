@@ -1,4 +1,4 @@
-node ('win'){
+node ('linux91'){
     def app
 
     stage('Clone repository') {
