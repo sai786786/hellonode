@@ -11,7 +11,7 @@ node ('win'){
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("saikiran786/hellonode")
+        app = docker.build("hellonode")
     }
 
    /* stage('Test image') {
@@ -31,9 +31,7 @@ node ('win'){
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_credentials') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
-            withDockerRegistry([ credentialsId: "dockerhub_credentials", url: "" ]) {
-                sh 'docker push brightbox/terraform:${env.BUILD_ID}'
-          sh 'docker push saikiran786/hellonode:latest'
+            
         }
     }
 }
